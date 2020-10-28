@@ -1,0 +1,22 @@
+server:
+  port: 8082
+
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  datasource:
+    url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/devdojo
+    username: root
+    password: devdojo
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url: 
+      defaultZone: http://localhost:8081/eureka/
+    fetch-registry: true
+    register-with-eureka: true
