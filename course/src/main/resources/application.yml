@@ -11,12 +11,14 @@ spring:
     url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/devdojo
     username: root
     password: devdojo
+  application:
+    name: course
 
 eureka:
   instance:
     prefer-ip-address: true
   client:
     service-url: 
-      defaultZone: http://localhost:8081/eureka/
+      defaultZone: http://localhost:8761/eureka/
     fetch-registry: true
     register-with-eureka: true
